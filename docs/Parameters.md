@@ -31,7 +31,7 @@ Type: string
 
 Possible Values: null
 
-Default: https://raw.githubusercontent.com/Azure/Moodle/master/
+Default: https://raw.githubusercontent.com/liuhebian/Moodle/moodle_401/
 
 
 ### _artifactsLocationSasToken
