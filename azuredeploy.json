@@ -145,7 +145,7 @@
             "type": "string"
         },
         "controllerVmSku": {
-            "defaultValue": "Standard_DS1_v2",
+            "defaultValue": "[parameters('controllerVmSku')]",
             "metadata": {
                 "description": "VM size for the controller VM"
             },
@@ -747,7 +747,7 @@
             "type": "string"
         },
         "vNetAddressSpace": {
-            "defaultValue": "172.31.0.0",
+            "defaultValue": "[parameters('vNetAddressSpace')]",
             "metadata": {
                 "description": "Address range for the Moodle virtual network and various subnets - presumed /16 for a newly created vnet in case customVnetId is blank. Further subneting (a number of */24 subnets starting from the xxx.yyy.zzz.0/24 will be created on a newly created vnet or your BYO-vnet (specified in customVnetId parameter)."
             },
@@ -1455,7 +1455,7 @@
             }
         ],
         "octets": "[split(parameters('vNetAddressSpace'), '.')]",
-        "resourceprefix": "[substring(uniqueString(resourceGroup().id, deployment().name), 3, 6)]",
+        "resourceprefix": "[parameters('resourceprefix')]",
         "subnetSanPrefix": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),2)))]",
         "subnetWebRange": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),0)), '.0/24')]"
     }
