@@ -24,13 +24,13 @@
         },
         "vNetAddressSpace": {
             "metadata": {
-                "description": "Address range for the Moodle virtual network and various subnets - presumed /16 for a newly created vnet"
+                "description": "Address range for the Moodle virtual network and various subnets - presumed /16 for a newly created vnet. e.g.: 10.64.0.0 "
             },
             "type": "string"
         },
         "resourceprefix": {
             "metadata": {
-                "description": "resource name prefix, refer to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
+                "description": "resource name prefix, e.g.: <app name>-<environment>-<region>-<###> refer to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
             },
             "type": "string"
         },
