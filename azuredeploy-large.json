@@ -30,7 +30,7 @@
         },
         "resourceprefix": {
             "metadata": {
-                "description": "resource prefix, refer to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
+                "description": "resource name prefix, refer to https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming"
             },
             "type": "string"
         },
