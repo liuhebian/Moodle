@@ -1399,7 +1399,7 @@
             "sshPublicKey": "[parameters('sshPublicKey')]",
             "sshUsername": "[parameters('sshUsername')]",
             "sslEnforcement": "[parameters('sslEnforcement')]",
-            "storageAccountName": "[tolower(concat('abs',variables('resourceprefix')))]",
+            "storageAccountName": "[tolower(concat('st',replace(variables('resourceprefix'),'-','')))]",
             "storageAccountType": "[parameters('storageAccountType')]",
             "subnetDb": "[concat('db-subnet-',variables('resourceprefix'))]",
             "subnetDbPrefix": "[concat(variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),7)))]",
