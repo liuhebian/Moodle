@@ -46,7 +46,7 @@
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "location": "[parameters('moodleCommon').location]",
-            "name": "[concat(parameters('moodleCommon').storageAccountName,'af')]",
+            "name": "[concat(parameters('moodleCommon').storageAccountName,'1af')]",
             "kind": "[if(equals(parameters('moodleCommon').storageAccountType, 'Premium_LRS'), 'FileStorage', 'Storage')]",
             "sku": {
                 "name": "[parameters('moodleCommon').storageAccountType]"
