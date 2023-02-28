@@ -189,6 +189,15 @@ EOF
     setup_and_mount_azure_files_moodle_share $storageAccountName $storageAccountKey
   fi
 
+
+  # Custom: mount NFS export (set up on controller VM--No HA)
+    echo -e '\n\rMounting NFS export from '10.64.4.4':/moodle-netapp on /moodle-mnt and adding it to /etc/fstab\n\r'
+    sudo mkdir -p /moodle-mnt
+    sudo chown www-data /moodle-mnt
+    sudo chmod 770 /moodle-mnt
+    configure_nfs_client_and_mount 10.64.4.4 /moodle-netapp /moodle-mnt
+
+
   # Configure syslog to forward
   cat <<EOF >> /etc/rsyslog.conf
 \$ModLoad imudp

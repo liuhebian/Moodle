@@ -85,7 +85,6 @@ check_fileServerType_param $fileServerType
     unattended-upgrades \
     tuned \
     varnish \
-    nfs-common\
     php$phpVersion \
     php$phpVersion-cli \
     php$phpVersion-curl \
@@ -189,15 +188,6 @@ EOF
   else # "azurefiles"
     setup_and_mount_azure_files_moodle_share $storageAccountName $storageAccountKey
   fi
-
-
-  # Feb 28: Custom: mount NFS export (set up on controller VM--No HA)
-    echo -e '\n\rMounting NFS export from '10.64.4.4':/moodle-netapp on /moodle-mnt and adding it to /etc/fstab\n\r'
-    sudo mkdir -p /moodle-mnt
-    sudo chown www-data /moodle-mnt
-    sudo chmod 770 /moodle-mnt
-    configure_nfs_client_and_mount 10.64.4.4 /moodle-netapp /moodle-mnt
-
 
   # Configure syslog to forward
   cat <<EOF >> /etc/rsyslog.conf
