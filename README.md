@@ -1,5 +1,5 @@
 
-# Deploy and Manage a Scalable Moodle Cluster on Azure
+# Deploy and Manage a Scalable Moodle Cluster on Azure Feb 15
 
 This repository contains guides and [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview) templates designed to help you deploy and manage a highly available and scalable
 [Moodle](https://moodle.com) cluster on Azure. In addition, the repository contains other useful information relevant to running Moodle on Azure such as a listing of Azure-relevant Moodle plugins and information on how to offer Moodle as a Managed Application on the Azure Marketplace or on an IT Service Catalog.
